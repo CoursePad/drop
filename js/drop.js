@@ -1,4 +1,5 @@
 (function() {
+  var Tether = require('tether/tether.min.js');
   var Evented, MIRROR_ATTACH, addClass, allDrops, clickEvents, createContext, end, extend, hasClass, name, removeClass, removeFromArray, sortAttach, tempEl, touchDevice, transitionEndEvent, transitionEndEvents, _ref,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -359,8 +360,8 @@
     })(Evented);
     return drop;
   };
-
-  window.Drop = createContext();
+  var Drop = createContext();
+  module.exports = Drop;
 
   document.addEventListener('DOMContentLoaded', function() {
     return Drop.updateBodyClasses();
