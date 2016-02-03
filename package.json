@@ -2,7 +2,7 @@
   "name": "tether-drop",
   "version": "1.4.2",
   "description": "Client-side library for creating dropdowns",
-  "main": "src/js/drop.js",
+  "main": "dist/js/drop.js",
   "authors": [
     "Zack Bloom <zackbloom@gmail.com>",
     "Adam Schwartz <adam.flynn.schwartz@gmail.com>"

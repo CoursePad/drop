@@ -247,7 +247,11 @@ function createContext() {
           generateAndSetContent();
           this.on('open', generateAndSetContent.bind(this));
         } else if (typeof this.options.content === 'object') {
-          this.content.appendChild(this.options.content);
+          if (React.isValidElement(this.options.content)) {
+            ReactDOM.render(this.options.content, this.content);
+          } else {
+            this.content.appendChild(this.options.content);
+          }
         } else {
           this.content.innerHTML = this.options.content;
         }
